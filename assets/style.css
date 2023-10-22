@@ -1,0 +1,815 @@
+/* Reset */
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* Reset End */
+
+/* Constants */
+:root {
+    --clr-primary: #E3C871;
+    --clr-secondary: #B3B3B3;
+    --gradient-primary: linear-gradient(90deg, rgba(233, 208, 118, 1) 0%, rgba(175, 134, 72, 1) 100%);
+}
+
+
+/* Font */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+
+/* Basic */
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-family: 'Montserrat', sans-serif;
+    scroll-padding-top: 50px;
+    font-size: 10px;
+}
+
+body {
+    background-color: #EAEAEA;
+    color: #010E3A;
+    font-size: 1.8rem;
+    line-height: 1.6;
+    font-weight: 500;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+img {
+    width: 100%;
+}
+
+/* End Basic */
+
+/* header start */
+
+.header {
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.75rem 4rem;
+    background-color: rgba(0, 0, 0, .8);
+}
+
+.header__logo_img {
+    max-width: 12rem;
+}
+
+.nav__links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    gap: 4rem;
+    font-size: 1.4rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+
+.nav__links_cta {
+    color: #FF914D;
+}
+
+/* header end */
+
+
+/* hero start */
+
+.hero__section {
+    min-height: 100vh;
+    background-image: url('./images/hero-background-dock.webp');
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 3rem;
+    align-items: center;
+    text-align: center;
+
+    color: #FFFFFF;
+}
+
+.hero__section_logo {
+    max-width: 40rem;
+    margin-bottom: 2rem;
+}
+
+.hero__section_heading {
+    font-size: 3.6rem;
+    font-weight: 700;
+    line-height: 1.1;
+    max-width: 35ch;
+    /* margin-bottom: 1rem; */
+}
+
+.hero__section_subheading {
+    font-size: 2rem;
+    font-weight: 500;
+    letter-spacing: 2.4px;
+}
+
+.hero__section_cta {
+    display: flex;
+    width: max-content;
+    gap: 1rem;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 5rem;
+    font-size: 1.6rem;
+    font-weight: 600;
+
+    background: rgb(255, 145, 77);
+    background-image: linear-gradient(to right, #ff5630, #ff863b, #f08645);
+    box-shadow: 0 4px 15px 0 rgba(185, 77, 41, 0.75);
+    background-size: 300% 100%;
+
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+
+    color: #F6F6F6;
+    border-radius: 2px;
+}
+
+.hero__section_cta:hover {
+    background-position: 100% 0;
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+/* header end */
+
+
+/* about start */
+
+.about__section {
+    padding: 12rem 4rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-image: url('./images/wmap.webp');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.about__section_heading {
+    font-size: 3.6rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+}
+
+.about__section_text {
+    max-width: 70rem;
+}
+
+/* about end */
+
+/* service start */
+
+.services__section {
+    background-color: #010619;
+    color: #FFFFFF;
+    padding: 6rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.services__section_heading {
+    font-size: 3.6rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.services__section_text {
+    font-size: 2rem;
+    font-weight: 500;
+    letter-spacing: 2.4px;
+}
+
+.services__section_grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(20rem, 30rem));
+    margin-top: 4rem;
+    gap: 2rem;
+}
+
+.sevice_item {
+    background-color: #F6F6F6;
+    padding: 3rem 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    color: #010811;
+}
+
+.sevice_item img {
+    max-width: 8rem;
+    object-fit: contain;
+}
+
+.sevice_item h3 {
+    font-weight: 600;
+    font-size: 2rem;
+}
+
+.sevice_item p {
+    font-weight: 300;
+    font-size: 1.4rem;
+}
+
+/* service end */
+
+
+/* products start */
+
+.product__section {
+    padding: 6rem 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.product__section_heading {
+    font-size: 3.6rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+}
+
+
+.product__grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(20rem, 30rem));
+    margin-top: 4rem;
+    gap: 2rem;
+}
+
+.product__item {
+    position: relative;
+    transition: all 300ms ease-in-out;
+    filter: drop-shadow(0px -1px 10px rgba(0, 0, 0, 0.1));
+}
+
+.product__item:hover .product_text, .product__item:hover .product_link {
+    animation-name: show;
+    animation-timing-function: ease;
+    display: block;
+}
+
+.product__item:hover .product__item_img {
+    filter: blur(1px);
+}
+
+.product__item:hover {
+    filter: drop-shadow(0px -4px 12px rgba(0, 0, 0, 0.2));
+}
+
+@keyframes show {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0.8;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.product__item_img {
+    aspect-ratio: 3/4;
+    transition: filter 200ms ease-in;
+}
+
+.product__item_details {
+    position: absolute;
+    width: 100%;
+    background-color: #F6F6F6;
+    padding: 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 2rem;
+    bottom: 0;
+}
+
+.product_name {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.product_text {
+    display: none;
+    font-size: 1.4rem;
+    font-weight: 400;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+}
+
+.product_link {
+    display: none;
+    color: #FF914D;
+    font-weight: 500;
+    font-size: 1.6rem;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+}
+
+/* products end */
+
+
+/* CTA start */
+.cta__section {
+    padding-top: 8rem;
+    display: grid;
+    justify-content: center
+}
+
+.cta_container {
+    display: flex;
+    gap: 4rem;
+    align-items: center;
+    padding: 4rem 8rem;
+    background-image: linear-gradient(90deg, rgba(38, 111, 196, 0.8) 0%, rgba(38, 111, 196, 0.5) 100%), url('./images/dock-cta.webp');
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 4px;
+    margin-bottom: -4rem;
+}
+
+.cta_container .cta_text h3 {
+    font-size: 1.4rem;
+    font-weight: 400;
+}
+
+.cta_container .cta_text p {
+    font-size: 2.4rem;
+    color: #FFFFFF;
+    max-width: 46ch;
+    line-height: 1.4;
+}
+
+/* CTA end */
+
+
+
+
+/* footer start */
+
+footer {
+    background-color: #010619;
+    color: #d8d8d8;
+    display: flex;
+    justify-content: space-between;
+    padding: 20rem 4rem 8rem;
+}
+
+.footer__column {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    font-size: 1.6rem;
+}
+
+.footer_logo {
+    max-width: 30rem;
+}
+
+.footer_copyright {
+    font-size: 1.4rem;
+}
+
+.footer_link_contact {
+    font-weight: 600;
+}
+
+
+
+/* Contact start */
+.contact__section {
+    padding: 4rem;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    /* gap: 4rem; */
+}
+
+.contact__section h1 {
+    justify-self: center;
+    margin-bottom: 4rem;
+    font-size: 3.6rem;
+    font-weight: 600;
+}
+
+.contact_information {
+    position: relative;
+}
+
+.contact_information h2 {
+    font-size: 2.8rem;
+    font-weight: 600;
+    /* margin-bottom: 2rem; */
+}
+
+#contact_line {
+    max-height: 30rem;
+}
+
+
+.contact_information {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    justify-content: center;
+    width: max-content;
+    gap: 1rem;
+
+}
+
+.comapany_address_info {
+    padding: 2rem 4rem;
+}
+
+.comapany_contact_info {
+    background-color: #FFDCC6;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 2rem 4rem;
+    color: #010811;
+    align-self: flex-start;
+    /* justify-self : flex-start; */
+}
+
+.number, .email, address span {
+    font-size: 1.8rem;
+    color: #010811;
+    font-weight: 500;
+}
+
+.contact_information .flag {
+    width: 1.5rem;
+}
+
+.contact_information .country {
+    font-size: 1.4rem;
+}
+
+#contact_form {
+    display: flex;
+    width: max-content;
+    padding: 4rem 8rem;
+    background-color: #F8F8F8;
+    flex-direction: column;
+    gap: 1.6rem;
+    justify-self: center;
+    margin-bottom: -10%;
+    margin-top: -0.8rem;
+}
+
+
+#contact_form h3 {
+    font-size: 3rem;
+    font-weight: 600;
+}
+
+#contact_form p {
+    font-size: 1.4rem;
+    font-weight: 400;
+}
+
+.field_group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.field_group label {
+    font-size: 1.2rem;
+    font-weight: 500;
+    font-family: inherit;
+}
+
+.field_group input, .field_group textarea, .field_group select, option {
+    font-family: inherit;
+    font-weight: 600;
+    max-width: 40rem;
+    min-width: 25rem;
+    padding: 1rem 0.8rem;
+    border: none;
+    border-radius: 4px;
+    border-left: 4px solid #010619;
+}
+
+.error_message {
+    display: none;
+    padding: 1rem 2rem;
+    background-color: crimson;
+    color: #FFFFFF;
+    font-size: 1.4rem;
+    width: max-content;
+}
+
+
+
+
+
+@media screen and (max-width: 768px) {
+
+    /* header start */
+
+    .header {
+        padding: 1rem 2rem;
+        /* background-color: rgba(0, 0, 0, .8); */
+    }
+
+    .header__logo_img {
+        max-width: 8rem;
+    }
+
+    .nav__links {
+        display: none;
+    }
+
+
+    /* header end */
+
+
+    /* hero start */
+
+    .hero__section {
+        min-height: max-content;
+        padding: 14rem 2rem 10rem;
+        gap: 3.2rem;
+    }
+
+    .hero__section_logo {
+        max-width: 20rem;
+    }
+
+    .hero__section_heading {
+        font-size: 2.8rem;
+        line-height: 1.2;
+    }
+
+    .hero__section_subheading {
+        font-size: 1.6rem;
+        letter-spacing: 2px;
+    }
+
+
+    /* header end */
+
+
+    /* about start */
+
+    .about__section {
+        padding: 8rem 2rem;
+    }
+
+    .about__section_heading {
+        font-size: 2.8rem;
+        font-weight: 600;
+        line-height: 1.2;
+        margin-bottom: 2rem;
+    }
+
+    .about__section_text {
+        font-size: 1.6rem;
+    }
+
+    /* about end */
+
+    /* service start */
+
+    .services__section {
+        padding: 8rem 2rem;
+    }
+
+    .services__section_heading {
+        font-size: 2.8rem;
+        font-weight: 600;
+        line-height: 1.2;
+        margin-bottom: 2rem;
+    }
+
+    .services__section_text {
+        font-size: 1.6rem;
+        letter-spacing: 2px;
+    }
+
+    .services__section_grid {
+        grid-template-columns: 1fr;
+        gap: 4rem;
+    }
+
+    .sevice_item {
+        max-width: 80vw;
+        padding: 4rem 2rem;
+    }
+
+    /* service end */
+
+
+    /* products start */
+
+    .product__section {
+        padding: 8rem 2rem;
+    }
+
+    .product__section_heading {
+        font-size: 2.8rem;
+        font-weight: 600;
+        line-height: 1.2;
+        margin-bottom: 2rem;
+    }
+
+
+    .product__grid {
+        grid-template-columns: 1fr;
+        gap: 4rem;
+    }
+
+    /* products end */
+
+
+    /* CTA start */
+    .cta__section {
+        padding-top: 2rem;
+    }
+
+    .cta_container {
+        max-width: 90vw;
+        flex-direction: column;
+        gap: 4rem;
+        padding: 4rem;
+        margin-bottom: -6rem;
+    }
+
+    .cta_container .cta_text h3 {
+        font-size: 1.6rem;
+        font-weight: 500;
+    }
+
+    .cta_container .cta_text p {
+        line-height: 1.2;
+    }
+
+    /* CTA end */
+
+
+
+
+    /* footer start */
+
+    footer {
+        padding: 14rem 4rem 8rem;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 2rem;
+    }
+
+    .footer_logo {
+        max-width: 20rem;
+    }
+
+    /* footer end */
+
+
+    /* Contact start */
+    .contact__section {
+        padding-inline: 2rem;
+        padding-block: 10rem 6rem;
+        grid-template-columns: 1fr;
+    }
+
+    .contact_information {
+        grid-template-columns: 1fr;
+    }
+
+    .contact__section h1 {
+        font-size: 3rem;
+    }
+
+    .contact__section h2 {
+        font-size: 2rem;
+    }
+
+    .comapany_address_info, .comapany_contact_info {
+        padding: 2rem;
+    }
+
+    .graphic {
+        display: none;
+    }
+
+    #contact_form {
+        display: flex;
+        flex-direction: column;
+        gap: 1.6rem;
+        max-width: 100dvw;
+    }
+
+
+    #contact_form h1 {
+        font-size: 2.8rem;
+    }
+
+    #contact_form p {
+        font-size: 1.6rem;
+    }
+
+    .field_group input, .field_group textarea {
+        max-width: 30rem;
+        padding: 1.2rem 1rem;
+    }
+
+    .error_message {
+        display: none;
+        padding: 1rem 2rem;
+        background-color: crimson;
+        color: #FFFFFF;
+        font-size: 1.4rem;
+        width: max-content;
+    }
+
+}
